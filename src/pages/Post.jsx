@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import appwriteService from "../appwrite/conf";
-import { Button, Container } from "../components";
+import { Button, container } from "../components";
 import parse from "html-react-parser";
 import { useSelector } from "react-redux";
 
@@ -35,7 +35,7 @@ export default function Post() {
 
   return post ? (
     <div className="py-10">
-      <Container>
+      <container>
         {/* Image */}
         <div className="w-full flex justify-center mb-6">
           <img
@@ -70,7 +70,7 @@ export default function Post() {
         <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed">
           {parse(post.content)}
         </div>
-      </Container>
+      </container>
     </div>
   ) : null;
 }
